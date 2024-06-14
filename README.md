@@ -1,4 +1,4 @@
-# check-wood
+# golden-wood
 
 Landing page developed with Vue 3 in Vite from [Figma concept project](https://www.figma.com/design/5keTcI6dES71hcU1uFJTVh/Golden-Wood-%E2%80%93-Concept?node-id=0-1&t=kBpE3J2OKkFSysi7-1).
 
