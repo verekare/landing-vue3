@@ -1,0 +1,13 @@
+@use "@/styles/variables.scss";
+
+.imageGallery {
+  display: flex;
+  gap: 16px;
+
+  width: 100%;
+  height: 500px;
+}
+
+.imageCard {
+  min-width: 442.67px;
+}

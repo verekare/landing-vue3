@@ -1,0 +1,26 @@
+@use "@/styles/variables.scss";
+
+.sectionHead {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sectionTitle {
+  font-size: 48px;
+  color: variables.$color-default;
+}
+
+.sectionDesctiption {
+  max-width: 624px;
+
+  font-size: 24px;
+  line-height: 28.63px;
+  color: variables.$color-default-light;
+}
+
+.emphasizedText {
+  padding-left: 4px;
+
+  color: variables.$color-default;
+}

@@ -1,0 +1,70 @@
+/* Colors */
+
+$color-default: #2e3732;
+$color-default-light: #2e373266;
+$color-default-divider: #2e37321a;
+$color-default-border: rgb(46 55 50 / 0.1);
+$color-main: #f60;
+$color-white: #fff;
+$color-white-light: rgb(255 255 255 / 0.5);
+$color-white-dim: rgb(255 255 255 / 0.8);
+$color-white-border: rgb(255 255 255 / 0.1);
+$color-white-element: #fefefe;
+
+/* Fonts */
+
+@font-face {
+  font-family: "Golden Wood";
+  font-weight: 400;
+  src:
+    url("../fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff"),
+    url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Golden Wood";
+  font-weight: 500;
+  src:
+    url("../fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"),
+    url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype");
+}
+
+$font-family-default: "Golden Wood",
+  arial,
+  helvetica,
+  sans-serif;
+
+/* Breakpoints */
+
+$breakpoints: (
+  md: 1024px,
+  lg: 1600px,
+);
+
+@function breakpoint($key) {
+
+  @return map-get($breakpoints, $key);
+}
+
+/* Mixins for responsive layout */
+
+@mixin md {
+
+  @media (max-width: #{breakpoint(md)}) {
+    @content;
+  }
+}
+
+/* Container */
+
+$container-max-widths: (
+  md: 960px,
+  lg: 1280px,
+);
+
+@function container-max-width($key) {
+
+  @return map-get($container-max-widths, $key);
+}

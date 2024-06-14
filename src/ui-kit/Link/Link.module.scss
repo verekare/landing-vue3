@@ -1,0 +1,16 @@
+@use "@/styles/variables.scss";
+
+.link {
+  &:hover,
+  &:focus {
+    color: variables.$color-main;
+
+    .iconArrow {
+      display: inline-block;
+    }
+  }
+}
+
+.iconArrow {
+  display: none;
+}

@@ -1,0 +1,104 @@
+@use "@/styles/variables.scss";
+
+.contactBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 50px;
+
+  background-color: variables.$color-main;
+}
+
+.contactHead {
+  gap: 24px;
+}
+
+.contactHead > *:first-child {
+  color: variables.$color-white;
+}
+
+.contactHead > *:last-child {
+  color: variables.$color-white-light;
+}
+
+.footerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  padding: 120px 50px;
+
+  background-color: variables.$color-default;
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-bottom: 0;
+}
+
+.footerHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footerTitle {
+  font-size: 78px;
+  color: variables.$color-white;
+}
+
+.sectionDesctiption {
+  max-width: 624px;
+
+  font-size: 24px;
+  line-height: 28.63px;
+  color: variables.$color-white-light;
+}
+
+.emphasizedText {
+  padding-left: 4px;
+
+  color: variables.$color-white;
+}
+
+.linkLists {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+
+  margin-right: 50px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+
+  border-top: 1px solid variables.$color-white-border;
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 16px;
+  color: variables.$color-white-light;
+}
+
+.contactLinkList {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+
+  color: variables.$color-white;
+}
+
+.contactLinkItem {
+  font-size: 20px;
+}

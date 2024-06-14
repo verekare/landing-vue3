@@ -1,0 +1,70 @@
+@use "@/styles/variables.scss";
+
+:local(.sectionLayout) {
+  flex-direction: row;
+  gap: 180px;
+}
+
+.faqLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contactTitle {
+  font-size: 78px;
+  color: variables.$color-default;
+}
+
+.contactDesctiption {
+  max-width: 624px;
+
+  font-size: 24px;
+  line-height: 28.63px;
+  color: variables.$color-default-light;
+}
+
+.emphasizedText {
+  padding-left: 4px;
+
+  color: variables.$color-default;
+}
+
+.accordionBlock {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 780px;
+}
+
+.faqQuestion {
+  cursor: pointer;
+
+  margin-top: 16px;
+  margin-bottom: 18px;
+
+  font-size: 36px;
+
+  &:hover,
+  &:focus {
+    color: variables.$color-main;
+  }
+}
+
+.faqAnswer {
+  font-size: 20px;
+  line-height: 23.86px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.divider {
+  display: block;
+
+  width: 100%;
+  height: 1px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  border-top: 1px solid variables.$color-default-divider;
+}

@@ -1,0 +1,24 @@
+@use "@/styles/variables.scss";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.listTitle {
+  font-size: 32px;
+  color: variables.$color-white;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.listItem {
+  font-size: 20px;
+  color: variables.$color-white-light;
+}

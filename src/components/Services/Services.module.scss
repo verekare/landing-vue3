@@ -1,0 +1,58 @@
+@use "@/styles/variables.scss";
+
+.serviceCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 48px;
+}
+
+.singleCard {
+  display: flex;
+  align-items: flex-end;
+
+  width: calc(100% * (1/3) - 80px);
+  min-width: 328px;
+  height: 300px;
+
+  background-color: variables.$color-white-element;
+  background-size: 0;
+
+  transition: background-size 0.7s ease-out 0.5s;
+
+  &:hover {
+    background-size: cover;
+  }
+
+  &:hover .cardName {
+    color: variables.$color-white;
+  }
+
+  &:hover .smallButton {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.smallButton {
+  margin-right: 24px;
+  margin-bottom: 32px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: visibility 0.5s, opacity 0.3s ease-out;
+}
+
+.cardName {
+  max-width: 280px;
+  margin-bottom: 32px;
+  margin-left: 24px;
+
+  font-size: 32px;
+  line-height: 36px;
+  color: variables.$color-default;
+  text-wrap: wrap;
+}

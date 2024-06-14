@@ -1,0 +1,43 @@
+@use "@/styles/variables.scss";
+
+@mixin button-styles {
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+  padding: 8px 16px;
+
+  font-weight: 400;
+  color: variables.$color-default;
+
+  background-color: variables.$color-white;
+  border-radius: 32px;
+}
+
+.primaryButton {
+
+  @include button-styles;
+
+  font-size: 20px;
+
+  &:hover {
+    color: variables.$color-white;
+
+    background-color: variables.$color-main;
+  }
+}
+
+.bigPrimaryButton {
+
+  @include button-styles;
+
+  padding: 21.86px 32.8px;
+
+  font-size: 36px;
+
+  border-radius: 43.73px;
+
+  &:hover {
+    color: variables.$color-main;
+  }
+}
