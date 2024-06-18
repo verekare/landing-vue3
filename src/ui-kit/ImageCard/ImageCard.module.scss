@@ -1,17 +1,34 @@
 @use "@/styles/variables.scss";
 
 .imageCard {
+  position: relative;
+
   background-image: inherit;
   background-position: center;
   background-size: cover;
   border: 1px solid variables.$color-default-border;
   border-radius: 10px;
+
+  &:hover {
+    .gradientLayer {
+      opacity: 1;
+    }
+  }
+}
+
+.cardContent {
+  position: relative;
+  z-index: 10;
 }
 
 .gradientLayer {
-  &:hover {
-    background: linear-gradient(16deg, rgb(0 0 0 / 0.3) 35%, rgb(0 0 0 / 0) 65%) inherit;
-    background-position: center;
-    background-size: cover;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  background: linear-gradient(16deg, variables.$color-default-shadow 35%, variables.$color-transparent 65%);
 }
