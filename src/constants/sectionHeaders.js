@@ -16,7 +16,9 @@ export default {
   },
   portfolio: {
     title: 'Проекты с мебелью от Golden Wood',
-    description: 'Отмечайте @goldenwood_studio в публикациях, лучшие мы разместим здесь.',
+    description: 'Отмечайте',
+    emphasized: '@goldenwood_studio ',
+    ending: 'в публикациях, лучшие мы разместим здесь.',
   },
   faq: {
     title: 'FAQ',

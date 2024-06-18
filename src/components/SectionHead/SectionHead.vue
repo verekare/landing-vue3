@@ -4,6 +4,7 @@
     <div :class="$style.sectionDesctiption">
       <span>{{ content.description }}</span>
       <span :class="$style.emphasizedText">{{ content.emphasized }}</span>
+      <span :class="$style.description">{{ content.ending }}</span>
     </div>
   </div>
 </template>
