@@ -21,6 +21,11 @@
 
   vertical-align: middle;
 
+  .iconArrow {
+
+    @include icon-wrapper;
+  }
+
   &:hover,
   &:focus {
     color: variables.$color-main;
