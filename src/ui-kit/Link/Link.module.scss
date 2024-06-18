@@ -1,16 +1,50 @@
 @use "@/styles/variables.scss";
 
+@mixin icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 26px;
+
+  svg {
+    max-height: 100%;
+  }
+}
+
 .link {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+
+  vertical-align: middle;
+
   &:hover,
   &:focus {
     color: variables.$color-main;
 
     .iconArrow {
-      display: inline-block;
+
+      @include icon-wrapper;
+
+      display: block;
+
+      :global(.colorElement) {
+        fill: variables.$color-main;
+      }
     }
   }
 }
 
-.iconArrow {
+.iconArrow :global(.colorElement) {
+  fill: variables.$color-white;
+}
+
+.iconArrowHidden {
+
+  @include icon-wrapper;
+
   display: none;
 }

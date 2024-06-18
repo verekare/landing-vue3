@@ -1,7 +1,9 @@
 <template>
   <button @click="window.open(link.path)" type="submit" :class="$style.link">
     <slot></slot>
-    <InlineSvg :class="$style.iconArrow" src="@/assets/arrow.svg"></InlineSvg>
+    <span :class="hasDefaultArrow ? $style.iconArrow : $style.iconArrowHidden">
+      <InlineSvg src="/src/assets/arrow.svg"></InlineSvg>
+    </span>
   </button>
 </template>
 
@@ -12,6 +14,7 @@ defineProps({
     name: String,
     path: String,
   },
+  hasDefaultArrow: Boolean,
 });
 </script>
 

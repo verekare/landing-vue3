@@ -17,8 +17,8 @@
         </a>
       </div>
       <div :class="$style.linkLists">
-        <LinkList :services="SERVICES_ROOMS"></LinkList>
-        <LinkList :services="SERVICES_FURNITURE"></LinkList>
+        <LinkList :hasDefaultArrow="false" :services="SERVICES_ROOMS"></LinkList>
+        <LinkList :hasDefaultArrow="false" :services="SERVICES_FURNITURE"></LinkList>
       </div>
     </div>
     <span :class="$style.divider"></span>
@@ -29,6 +29,7 @@
           v-for="item in content.footer.contacts"
           :class="$style.contactLinkItem"
           :link="content.footer.contacts"
+          :hasDefaultArrow="true"
           >{{ item.name }}</Link
         >
       </ul>
