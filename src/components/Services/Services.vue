@@ -1,18 +1,20 @@
 <template>
-  <div class="sectionLayout">
-    <SectionHead :content="content.services" />
-    <div :class="$style.serviceCards">
-      <ImageCard
-        v-for="service in SERVICES"
-        :class="$style.singleCard"
-        :image-path="service.path"
-      >
-        <h4 :class="$style.cardName">{{ service.name }}</h4>
-        <SmallButton
-          :class="$style.smallButton"
-          :iconPath="'/src/assets/arrow.svg'"
-        ></SmallButton>
-      </ImageCard>
+  <div class="container">
+    <div class="sectionLayout">
+      <SectionHead :content="content.services" />
+      <div :class="$style.serviceCards">
+        <ImageCard
+          v-for="service in SERVICES"
+          :class="$style.singleCard"
+          :image-path="service.path"
+        >
+          <h4 :class="$style.cardName">{{ service.name }}</h4>
+          <SmallButton
+            :class="$style.smallButton"
+            :iconPath="'/src/assets/icon_arrow.svg'"
+          ></SmallButton>
+        </ImageCard>
+      </div>
     </div>
   </div>
 </template>
