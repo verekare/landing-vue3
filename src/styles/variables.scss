@@ -1,3 +1,5 @@
+@import 'vue-ionicons/ionicons.scss';
+
 /* Colors */
 
 $color-default: #2e3732;
@@ -16,44 +18,40 @@ $color-white-element: #fefefe;
 /* Fonts */
 
 @font-face {
-  font-family: "Golden Wood";
+  font-family: 'Golden Wood';
   font-weight: 400;
   src:
-    url("../fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
-    url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff"),
-    url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+    url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Golden Wood";
+  font-family: 'Golden Wood';
   font-weight: 500;
   src:
-    url("../fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"),
-    url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"),
-    url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype");
+    url('../fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype');
 }
 
-$font-family-default: "Golden Wood",
-  arial,
-  helvetica,
-  sans-serif;
+$font-family-default: 'Golden Wood', arial, helvetica, sans-serif;
 
 /* Breakpoints */
 
 $breakpoints: (
+  sm: 640px,
   md: 1024px,
   lg: 1600px,
 );
 
 @function breakpoint($key) {
-
   @return map-get($breakpoints, $key);
 }
 
 /* Mixins for responsive layout */
 
 @mixin md {
-
   @media (max-width: #{breakpoint(md)}) {
     @content;
   }
@@ -67,6 +65,5 @@ $container-max-widths: (
 );
 
 @function container-max-width($key) {
-
   @return map-get($container-max-widths, $key);
 }

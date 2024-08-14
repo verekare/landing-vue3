@@ -6,6 +6,7 @@
   ],
   "plugins": ["stylelint-order"],
   "rules": {
+    "string-quotes": "single",
     "alpha-value-notation": "number",
     "max-line-length": null,
     "declaration-block-no-redundant-longhand-properties": null,
@@ -23,6 +24,12 @@
       }
     ],
     "at-rule-no-unknown": null,
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"]
+      }
+    ],
     "scss/function-no-unknown": null,
     "color-function-notation": ["modern", { "ignore": ["with-var-inside"] }]
   }

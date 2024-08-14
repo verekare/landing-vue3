@@ -70,7 +70,7 @@ export const SERVICES_FURNITURE = {
   ],
 };
 
-export const FAQ_CONTENT = [
+export const FAQS = [
   {
     question: 'Сколько будет стоить кухня?',
     answer:

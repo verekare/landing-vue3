@@ -1,6 +1,8 @@
 <template>
-  <div class="sectionLayout">
-    <SectionHead :content="content.portfolio" />
+  <div class="container">
+    <div class="sectionLayout">
+      <SectionHead :content="content.portfolio" />
+    </div>
   </div>
 </template>
 

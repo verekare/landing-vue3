@@ -1,12 +1,14 @@
 <template>
-  <div class="sectionLayout">
-    <SectionHead :content="content.manufacture" />
-    <div :class="$style.imageGallery">
-      <ImageCard
-        v-for="imagePath in MANUFACTURE_IMAGE_PATHS"
-        :image-path="imagePath.path"
-        :class="$style.imageCard"
-      />
+  <div class="container">
+    <div class="sectionLayout">
+      <SectionHead :content="content.manufacture" />
+      <div :class="$style.imageGallery">
+        <ImageCard
+          v-for="imagePath in MANUFACTURE_IMAGE_PATHS"
+          :image-path="imagePath.path"
+          :class="$style.imageCard"
+        />
+      </div>
     </div>
   </div>
 </template>

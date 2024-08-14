@@ -5,12 +5,15 @@
   </div>
 
   <div :class="$style.footerBlock">
-    <div :class="$style.footerTop">
+    <div :class="$style.footerMain">
       <div :class="$style.footerHeader">
         <h2 :class="$style.footerTitle">{{ content.footer.title }}</h2>
         <div :class="$style.sectionDesctiption">
-          <span>{{ content.footer.description }}</span>
-          <span :class="$style.emphasizedText">{{ content.footer.emphasized }}</span>
+          <span
+            v-for="text in content.footer.description"
+            :class="text.isEmphasized ? $style.emphasizedText : $style.description"
+            >{{ text.content }}</span
+          >
         </div>
         <a :href="'mailto:' + content.footer.path" class="anchorLink">
           {{ content.footer.link }}

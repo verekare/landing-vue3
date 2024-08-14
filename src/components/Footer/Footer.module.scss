@@ -33,12 +33,16 @@
   background-color: variables.$color-default;
 }
 
-.footerTop {
+.footerMain {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   padding-bottom: 0;
+}
+
+.footerMainLeft > * {
+  color: variables.$color-white;
 }
 
 .footerHeader {

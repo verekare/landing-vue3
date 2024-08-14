@@ -2,9 +2,11 @@
   <div :class="$style.sectionHead">
     <h2 :class="$style.sectionTitle">{{ content.title }}</h2>
     <div :class="$style.sectionDesctiption">
-      <span>{{ content.description }}</span>
-      <span :class="$style.emphasizedText">{{ content.emphasized }}</span>
-      <span :class="$style.description">{{ content.ending }}</span>
+      <span
+        v-for="text in content.description"
+        :class="text.isEmphasized ? $style.emphasizedText : $style.description"
+        >{{ text.content }}</span
+      >
     </div>
   </div>
 </template>
