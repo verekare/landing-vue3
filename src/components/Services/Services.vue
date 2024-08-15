@@ -9,10 +9,10 @@
           :image-path="service.path"
         >
           <h4 :class="$style['services__item-title']">{{ service.name }}</h4>
-          <SmallButton
+          <SecondaryButton
             :class="$style.button__small"
             :iconPath="'/src/assets/icon_arrow.svg'"
-          ></SmallButton>
+          ></SecondaryButton>
         </ImageCard>
       </div>
     </div>
@@ -24,7 +24,7 @@ import SectionHead from '@/components/SectionHead/SectionHead.vue';
 import ImageCard from '@/ui-kit/ImageCard/ImageCard.vue';
 import content from '@/constants/sectionHeaders.js';
 import { SERVICES } from '@/constants/services';
-import SmallButton from '@/ui-kit/SmallButton/SmallButton.vue';
+import SecondaryButton from '@/ui-kit/SecondaryButton/SecondaryButton.vue';
 </script>
 
 <style module lang="scss">

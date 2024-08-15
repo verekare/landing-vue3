@@ -1,0 +1,35 @@
+@use '@/styles/variables.scss';
+
+.button__small {
+  display: flex;
+  align-items: center;
+
+  width: 84px;
+  height: 60px;
+  padding: 12px 24px;
+
+  background-color: variables.$color-white;
+  border-radius: 48px;
+
+  &:hover {
+    background-color: variables.$color-main;
+
+    :global(.colorElement) {
+      fill: variables.$color-white;
+    }
+  }
+}
+
+.icon-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  width: 84px;
+  height: 45px;
+
+  svg {
+    width: 100%;
+  }
+}

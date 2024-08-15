@@ -15,7 +15,7 @@
               <h3 :class="$style.gallery__item__block__info__title">{{ room.name }}</h3>
               <p :class="$style.gallery__item__block__info__details">{{ room.details }}</p>
             </div>
-            <SmallButton :iconPath="'/src/assets/icon_arrow.svg'" />
+            <SecondaryButton :iconPath="'/src/assets/icon_arrow.svg'" />
           </div>
         </ImageCard>
       </div>
@@ -28,7 +28,7 @@ import SectionHead from '@/components/SectionHead/SectionHead.vue';
 import content from '@/constants/sectionHeaders';
 import { SERVICES_ROOMS } from '@/constants/services';
 import ImageCard from '@/ui-kit/ImageCard/ImageCard.vue';
-import SmallButton from '@/ui-kit/SmallButton/SmallButton.vue';
+import SecondaryButton from '@/ui-kit/SecondaryButton/SecondaryButton.vue';
 import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 
