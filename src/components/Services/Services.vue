@@ -5,10 +5,10 @@
       <div :class="$style.services__list">
         <ImageCard
           v-for="service in SERVICES"
-          :class="$style.services__item"
+          :class="$style['services__item']"
           :image-path="service.path"
         >
-          <h4 :class="$style.services__itemitle">{{ service.name }}</h4>
+          <h4 :class="$style['services__item-title']">{{ service.name }}</h4>
           <SmallButton
             :class="$style.button__small"
             :iconPath="'/src/assets/icon_arrow.svg'"

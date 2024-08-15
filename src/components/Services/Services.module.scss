@@ -14,33 +14,6 @@
   align-items: flex-end;
 }
 
-.services__item {
-  display: flex;
-  align-items: flex-end;
-
-  width: calc(100% * (1 / 3) - 80px);
-  min-width: 328px;
-  height: 300px;
-
-  background-color: variables.$color-white-element;
-  background-size: 0;
-
-  transition-delay: 0.6s;
-  transition-property: background-size;
-
-  &:hover {
-    background-size: cover;
-  }
-
-  &:hover .cardName {
-    color: variables.$color-white;
-  }
-
-  &:hover .button__small {
-    visibility: visible;
-    opacity: 1;
-  }
-}
 
 .button__small {
   margin-right: 24px;
@@ -54,13 +27,42 @@
     opacity 0.25s ease-out;
 }
 
-.services__itemTitle {
-  max-width: 280px;
-  margin-bottom: 32px;
-  margin-left: 24px;
+.services {
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    width: calc(100% * (1 / 3) - 80px);
+    min-width: 328px;
+    height: 300px;
 
-  font-size: 32px;
-  line-height: 36px;
-  color: variables.$color-default;
-  text-wrap: wrap;
+    background-color: variables.$color-white-element;
+    background-size: 0;
+
+    transition-delay: 0.6s;
+    transition-property: background-size;
+
+    &:hover {
+      background-size: cover;
+    }
+
+    &:hover .cardName {
+      color: variables.$color-white;
+    }
+
+    &:hover .button__small {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item-title {
+    max-width: 280px;
+    margin-bottom: 32px;
+    margin-left: 24px;
+
+    font-size: 32px;
+    line-height: 36px;
+    color: variables.$color-default;
+    text-wrap: wrap;
+  }
 }
