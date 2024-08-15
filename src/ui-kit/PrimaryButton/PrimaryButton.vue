@@ -1,12 +1,12 @@
 <template>
-  <button :class="isBig ? $style.bigPrimaryButton : $style.primaryButton">
+  <button :class="isLarge ? $style.button__large : $style.button__default">
     <slot></slot>
   </button>
 </template>
 
 <script setup>
 defineProps({
-  isBig: Boolean,
+  isLarge: Boolean,
 });
 </script>
 <style module lang="scss">

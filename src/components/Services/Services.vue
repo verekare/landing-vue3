@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <div class="sectionLayout">
+    <div class="section">
       <SectionHead :content="content.services" />
-      <div :class="$style.serviceCards">
+      <div :class="$style.services__list">
         <ImageCard
           v-for="service in SERVICES"
-          :class="$style.singleCard"
+          :class="$style.services__item"
           :image-path="service.path"
         >
-          <h4 :class="$style.cardName">{{ service.name }}</h4>
+          <h4 :class="$style.services__itemitle">{{ service.name }}</h4>
           <SmallButton
-            :class="$style.smallButton"
+            :class="$style.button__small"
             :iconPath="'/src/assets/icon_arrow.svg'"
           ></SmallButton>
         </ImageCard>

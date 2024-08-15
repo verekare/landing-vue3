@@ -55,7 +55,7 @@
   margin-bottom: 32px;
 
   &:hover {
-    :global(.colorElement) {
+    :global(.icon__active) {
       fill: variables.$color-main;
     }
   }
@@ -75,7 +75,7 @@
   height: 48px;
   margin-right: 20px;
 
-  :global(.colorElement) {
+  :global(.icon__active) {
     fill: variables.$color-default;
   }
 }
@@ -109,7 +109,7 @@
 .openedQuestion {
   color: variables.$color-main;
 
-  :global(.colorElement) {
+  :global(.icon__active) {
     fill: variables.$color-main;
   }
 }

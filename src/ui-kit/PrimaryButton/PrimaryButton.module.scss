@@ -1,4 +1,4 @@
-@use "@/styles/variables.scss";
+@use '@/styles/variables.scss';
 
 @mixin button-styles {
   display: flex;
@@ -14,8 +14,7 @@
   border-radius: 32px;
 }
 
-.primaryButton {
-
+.button__default {
   @include button-styles;
 
   font-size: 20px;
@@ -27,8 +26,7 @@
   }
 }
 
-.bigPrimaryButton {
-
+.button__large {
   @include button-styles;
 
   padding: 21.86px 32.8px;

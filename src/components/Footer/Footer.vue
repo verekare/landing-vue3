@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.contactBlock">
     <SectionHead :content="content.contact" :class="$style.contactHead" />
-    <PrimaryButton :isBig="true">Связаться</PrimaryButton>
+    <PrimaryButton :isLarge="true">Связаться</PrimaryButton>
   </div>
 
   <div :class="$style.footerBlock">

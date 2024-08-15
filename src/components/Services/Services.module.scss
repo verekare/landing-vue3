@@ -1,6 +1,6 @@
 @use '@/styles/variables.scss';
 
-.serviceCards {
+.services__list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -14,7 +14,7 @@
   align-items: flex-end;
 }
 
-.singleCard {
+.services__item {
   display: flex;
   align-items: flex-end;
 
@@ -36,13 +36,13 @@
     color: variables.$color-white;
   }
 
-  &:hover .smallButton {
+  &:hover .button__small {
     visibility: visible;
     opacity: 1;
   }
 }
 
-.smallButton {
+.button__small {
   margin-right: 24px;
   margin-bottom: 32px;
 
@@ -54,7 +54,7 @@
     opacity 0.25s ease-out;
 }
 
-.cardName {
+.services__itemTitle {
   max-width: 280px;
   margin-bottom: 32px;
   margin-left: 24px;

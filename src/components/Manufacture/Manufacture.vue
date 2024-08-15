@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="sectionLayout">
+    <div class="section">
       <SectionHead :content="content.manufacture" />
       <div :class="$style.imageGallery">
         <ImageCard

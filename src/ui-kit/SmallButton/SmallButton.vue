@@ -1,5 +1,5 @@
 <template>
-  <button :class="$style.smallButton">
+  <button :class="$style.button__small">
     <span :class="$style.iconWrapper">
       <InlineSvg :src="iconPath"></InlineSvg>
     </span>
