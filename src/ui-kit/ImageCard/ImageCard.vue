@@ -1,7 +1,7 @@
 <template>
-  <div :class="$style.imageCard" :style="{ backgroundImage: 'url(' + imagePath + ')' }">
+  <div :class="$style['image-card']" :style="{ backgroundImage: 'url(' + imagePath + ')' }">
     <slot></slot>
-    <div :class="$style.gradientLayer"></div>
+    <div :class="$style.gradient"></div>
   </div>
 </template>
 

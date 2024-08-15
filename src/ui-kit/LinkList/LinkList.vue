@@ -1,10 +1,10 @@
 <template>
-  <div :class="$style.list">
-    <p :class="$style.listTitle">{{ services.type }}</p>
-    <ul :class="$style.linkList">
+  <div :class="$style['list-block']">
+    <p :class="$style['list-block__title']">{{ services.type }}</p>
+    <ul :class="$style['list-block__list']">
       <Link
         :link="services.list"
-        :class="$style.listItem"
+        :class="$style['list-block__list__item']"
         v-for="item in services.list"
         :hasDefaultArrow="hasDefaultArrow"
       >

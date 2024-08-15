@@ -179,11 +179,15 @@ html {
   display: flex;
   flex-direction: column;
   gap: 48px;
-}
 
-.rowLayout {
-  display: flex;
-  flex-direction: row;
+  &__row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-header__large {
+    font-size: 78px;
+  }
 }
 
 .anchorLink {

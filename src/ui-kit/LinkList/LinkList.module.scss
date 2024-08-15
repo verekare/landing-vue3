@@ -1,25 +1,25 @@
-@use "@/styles/variables.scss";
+@use '@/styles/variables.scss';
 
-.list {
+.list-block {
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
 
-.listTitle {
-  font-size: 32px;
-  color: variables.$color-white;
-}
+  &__title {
+    font-size: 32px;
+    color: variables.$color-white;
+  }
 
-.linkList {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: baseline;
-}
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: baseline;
 
-.listItem {
-  font-size: 20px;
-  line-height: 23.86px;
-  color: variables.$color-white-light;
+    &__item {
+      font-size: 20px;
+      line-height: 23.86px;
+      color: variables.$color-white-light;
+    }
+  }
 }

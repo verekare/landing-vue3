@@ -1,6 +1,6 @@
-@use "@/styles/variables.scss";
+@use '@/styles/variables.scss';
 
-.heroImage {
+.hero-block {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -8,33 +8,33 @@
   height: 900px;
   padding: 0 40px;
 
-  background-image: linear-gradient(90deg, rgb(0 0 0 / 0.3) 44%, rgb(0 0 0 / 0) 100%), url("@/assets/hero-block.jpeg");
+  background-image: linear-gradient(90deg, rgb(0 0 0 / 0.3) 44%, rgb(0 0 0 / 0) 100%), url('@/assets/hero-block.jpeg');
   background-position: center;
   background-size: cover;
+
+  &__title {
+    max-width: 720px;
+    margin-top: 300px;
+
+    font-size: 172.68px;
+    line-height: 120.88px;
+    color: variables.$color-white;
+    vertical-align: middle;
+  }
+
+  &__description {
+    max-width: 720px;
+    padding-left: 7px;
+
+    font-size: 23.24px;
+    color: variables.$color-white;
+  }
+
+  &__button {
+    margin-top: 5px;
+  }
 
   :global(.primaryButton) {
     color: variables.$color-default;
   }
-}
-
-.title {
-  max-width: 720px;
-  margin-top: 300px;
-
-  font-size: 172.68px;
-  line-height: 120.88px;
-  color: variables.$color-white;
-  vertical-align: middle;
-}
-
-.description {
-  max-width: 720px;
-  padding-left: 7px;
-
-  font-size: 23.24px;
-  color: variables.$color-white;
-}
-
-.heroButton {
-  margin-top: 5px;
 }

@@ -1,26 +1,30 @@
-@use "@/styles/variables.scss";
+@use '@/styles/variables.scss';
 
-.sectionHead {
+.header {
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
 
-.sectionTitle {
-  font-size: 48px;
-  color: variables.$color-default;
-}
+  &__title {
+    font-size: 48px;
+    color: variables.$color-default;
 
-.sectionDesctiption {
-  max-width: 624px;
+    &__large {
+      font-size: 78px;
+    }
+  }
 
-  font-size: 24px;
-  line-height: 28.63px;
-  color: variables.$color-default-light;
-}
+  &__description {
+    max-width: 624px;
 
-.emphasizedText {
-  padding-left: 4px;
+    font-size: 24px;
+    line-height: 28.63px;
+    color: variables.$color-default-light;
 
-  color: variables.$color-default;
+    &__emphasized {
+      padding-left: 4px;
+
+      color: variables.$color-default;
+    }
+  }
 }

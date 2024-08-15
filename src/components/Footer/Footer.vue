@@ -1,17 +1,17 @@
 <template>
-  <div :class="$style.contactBlock">
-    <SectionHead :content="content.contact" :class="$style.contactHead" />
+  <div :class="$style['contact-block']">
+    <SectionHead :content="content.contact" :class="$style['contact-block__header']" />
     <PrimaryButton :isLarge="true">Связаться</PrimaryButton>
   </div>
 
-  <div :class="$style.footerBlock">
-    <div :class="$style.footerMain">
-      <div :class="$style.footerHeader">
-        <h2 :class="$style.footerTitle">{{ content.footer.title }}</h2>
-        <div :class="$style.sectionDesctiption">
+  <div :class="$style['footer']">
+    <div :class="$style.footer__main">
+      <div :class="$style['footer__main__info']">
+        <h2 :class="$style['footer__main__info__title']">{{ content.footer.title }}</h2>
+        <div :class="$style['footer__main__info__description']">
           <span
             v-for="text in content.footer.description"
-            :class="text.isEmphasized ? $style.emphasizedText : $style.description"
+            :class="[text.isEmphasized ? $style.footer__info__description__emphasized : '']"
             >{{ text.content }}</span
           >
         </div>
@@ -19,18 +19,18 @@
           {{ content.footer.link }}
         </a>
       </div>
-      <div :class="$style.linkLists">
+      <div :class="$style.footer__main__nav">
         <LinkList :hasDefaultArrow="false" :services="SERVICES_ROOMS"></LinkList>
         <LinkList :hasDefaultArrow="false" :services="SERVICES_FURNITURE"></LinkList>
       </div>
     </div>
     <span :class="$style.divider"></span>
-    <div :class="$style.footerBottom">
-      <span :class="$style.copyright">{{ content.footer.copyright }}</span>
-      <ul :class="$style.contactLinkList">
+    <div :class="$style['footer__bottom']">
+      <span :class="$style['footer__bottom__copyright']">{{ content.footer.copyright }}</span>
+      <ul :class="$style['footer__bottom__social-links']">
         <Link
           v-for="item in content.footer.contacts"
-          :class="$style.contactLinkItem"
+          :class="$style['footer__bottom__social-links__item']"
           :link="content.footer.contacts"
           :hasDefaultArrow="true"
           >{{ item.name }}</Link

@@ -1,4 +1,4 @@
-@use "@/styles/variables.scss";
+@use '@/styles/variables.scss';
 
 @mixin icon-wrapper {
   display: flex;
@@ -22,7 +22,6 @@
   vertical-align: middle;
 
   .iconArrow {
-
     @include icon-wrapper;
   }
 
@@ -31,7 +30,6 @@
     color: variables.$color-main;
 
     .iconArrow {
-
       @include icon-wrapper;
 
       display: block;
@@ -48,7 +46,6 @@
 }
 
 .iconArrowHidden {
-
   @include icon-wrapper;
 
   display: none;

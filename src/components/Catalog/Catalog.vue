@@ -2,18 +2,18 @@
   <div class="container">
     <div class="section">
       <SectionHead :content="content.catalog" />
-      <div :class="$style.roomsGallery" ref="slider">
+      <div :class="$style.gallery" ref="slider">
         <ImageCard
           v-for="(room, index) in SERVICES_ROOMS.list"
           :key="index"
           :data-index="index"
-          :class="$style.singleCard"
+          :class="$style.gallery__item"
           :image-path="room.path"
         >
-          <div :class="$style.cardDetailsWrapper">
-            <div :class="$style.textWrapper">
-              <h3 :class="$style.cardName">{{ room.name }}</h3>
-              <p :class="$style.cardDetails">{{ room.details }}</p>
+          <div :class="$style.gallery__item__block">
+            <div :class="$style.gallery__item__block__info">
+              <h3 :class="$style.gallery__item__block__info__title">{{ room.name }}</h3>
+              <p :class="$style.gallery__item__block__info__details">{{ room.details }}</p>
             </div>
             <SmallButton :iconPath="'/src/assets/icon_arrow.svg'" />
           </div>

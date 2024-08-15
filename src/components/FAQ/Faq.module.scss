@@ -2,125 +2,89 @@
 
 @use '@/styles/variables.scss';
 
-:local(.sectionLayout) {
-  flex-direction: row;
-  gap: 180px;
-}
-
-:local(.sectionHead) {
-  &:nth-child(1) {
-    font-size: 78px !important;
-  }
-}
-
-.faqLayout {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.contactTitle {
-  font-size: 78px;
-  color: variables.$color-default;
-}
-
-.contactDesctiption {
-  max-width: 624px;
-
-  font-size: 24px;
-  line-height: 28.63px;
-  color: variables.$color-default-light;
-}
-
-.emphasizedText {
-  padding-left: 4px;
-
-  color: variables.$color-default;
-}
-
-.faqsAccordion {
+.faqs {
   display: flex;
   flex-direction: column;
 
   width: 780px;
-}
 
-.faqElement {
-  cursor: pointer;
+  &__faq {
+    cursor: pointer;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  margin-top: 32px;
-  margin-bottom: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 
-  &:hover {
-    :global(.icon__active) {
-      fill: variables.$color-main;
+    &:hover {
+      :global(.icon__active) {
+        fill: variables.$color-main;
+      }
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+
+      &__marker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 48px;
+        height: 48px;
+        margin-right: 20px;
+
+        :global(.icon__active) {
+          fill: variables.$color-default;
+        }
+      }
+
+      &__question {
+        padding-top: 6px;
+
+        font-size: 36px;
+        line-height: 1.2;
+      }
+
+      &__opened {
+        color: variables.$color-main;
+
+        :global(.icon__active) {
+          fill: variables.$color-main;
+        }
+      }
+    }
+
+    &__answer {
+      overflow: hidden;
+
+      max-height: 0;
+      margin-top: 10px;
+      margin-left: 68px;
+
+      font-size: 20px;
+      line-height: 23.86px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+
+      opacity: 0;
+
+      transition:
+        max-height 0.5s,
+        opacity 0.5s;
+
+      &__opened {
+        max-height: 100px;
+
+        opacity: 1;
+      }
     }
   }
 }
 
-.faqHeader {
-  display: flex;
-  align-items: center;
-}
-
-.faqMarker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 48px;
-  height: 48px;
-  margin-right: 20px;
-
-  :global(.icon__active) {
-    fill: variables.$color-default;
-  }
-}
-
-.faqQuestion {
-  padding-top: 6px;
-
-  font-size: 36px;
-  line-height: 1.2;
-}
-
-.faqAnswer {
-  overflow: hidden;
-
-  max-height: 0;
-  margin-top: 10px;
-  margin-left: 68px;
-
-  font-size: 20px;
-  line-height: 23.86px;
-  word-break: break-word;
-  overflow-wrap: break-word;
-
-  opacity: 0;
-
-  transition:
-    max-height 0.5s,
-    opacity 0.5s;
-}
-
-.openedQuestion {
-  color: variables.$color-main;
-
-  :global(.icon__active) {
-    fill: variables.$color-main;
-  }
-}
-
-.openedAnswer {
-  max-height: 100px;
-
-  opacity: 1;
-}
-
-.activeIcon {
+.icon__active {
   transform: rotate(180deg);
 }
 

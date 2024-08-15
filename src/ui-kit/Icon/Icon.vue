@@ -1,5 +1,5 @@
 <template>
-  <span :class="$style.iconWrapper">
+  <span :class="$style['icon-block']">
     <InlineSvg :src="iconPath"></InlineSvg>
   </span>
 </template>

@@ -1,6 +1,6 @@
-@use "@/styles/variables.scss";
+@use '@/styles/variables.scss';
 
-.contactBlock {
+.contact-block {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,21 +8,21 @@
   padding: 50px;
 
   background-color: variables.$color-main;
+
+  &__header {
+    gap: 24px;
+
+    & > *:first-child {
+      color: variables.$color-white;
+    }
+
+    & > *:last-child {
+      color: variables.$color-white-light;
+    }
+  }
 }
 
-.contactHead {
-  gap: 24px;
-}
-
-.contactHead > *:first-child {
-  color: variables.$color-white;
-}
-
-.contactHead > *:last-child {
-  color: variables.$color-white-light;
-}
-
-.footerBlock {
+.footer {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -31,51 +31,73 @@
   padding-bottom: 50px;
 
   background-color: variables.$color-default;
-}
 
-.footerMain {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-  padding-bottom: 0;
-}
+    padding-bottom: 0;
 
-.footerMainLeft > * {
-  color: variables.$color-white;
-}
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
 
-.footerHeader {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
+      &__title {
+        font-size: 78px;
+        color: variables.$color-white;
+      }
 
-.footerTitle {
-  font-size: 78px;
-  color: variables.$color-white;
-}
+      &__description {
+        max-width: 624px;
 
-.sectionDesctiption {
-  max-width: 624px;
+        font-size: 24px;
+        line-height: 28.63px;
+        color: variables.$color-white-light;
 
-  font-size: 24px;
-  line-height: 28.63px;
-  color: variables.$color-white-light;
-}
+        &__emphasized {
+          padding-left: 4px;
 
-.emphasizedText {
-  padding-left: 4px;
+          color: variables.$color-white;
+        }
+      }
+    }
 
-  color: variables.$color-white;
-}
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
 
-.linkLists {
-  display: flex;
-  flex-direction: row;
-  gap: 80px;
+      margin-right: 50px;
+    }
+  }
 
-  margin-right: 50px;
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__copyright {
+      font-size: 16px;
+      color: variables.$color-white-light;
+    }
+
+    &__social-links {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
+
+      color: variables.$color-white;
+
+      &__item {
+        font-size: 20px;
+        white-space: nowrap;
+      }
+    }
+  }
 }
 
 .divider {
@@ -83,30 +105,4 @@
   height: 1px;
 
   border-top: 1px solid variables.$color-white-border;
-}
-
-.footerBottom {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.copyright {
-  font-size: 16px;
-  color: variables.$color-white-light;
-}
-
-.contactLinkList {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  align-items: center;
-
-  color: variables.$color-white;
-}
-
-.contactLinkItem {
-  font-size: 20px;
-  white-space: nowrap;
 }

@@ -1,6 +1,6 @@
 <template>
   <button :class="$style.button__small">
-    <span :class="$style.iconWrapper">
+    <span :class="$style['icon-block']">
       <InlineSvg :src="iconPath"></InlineSvg>
     </span>
   </button>

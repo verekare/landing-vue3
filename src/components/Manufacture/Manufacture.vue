@@ -2,11 +2,11 @@
   <div class="container">
     <div class="section">
       <SectionHead :content="content.manufacture" />
-      <div :class="$style.imageGallery">
+      <div :class="$style['image-gallery']">
         <ImageCard
           v-for="imagePath in MANUFACTURE_IMAGE_PATHS"
           :image-path="imagePath.path"
-          :class="$style.imageCard"
+          :class="$style['image-gallery__item']"
         />
       </div>
     </div>
