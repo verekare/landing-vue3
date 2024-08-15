@@ -3,26 +3,26 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2.5rem;
 
   &__title {
-    font-size: 48px;
+    font-size: 3rem;
     color: variables.$color-default;
 
     &__large {
-      font-size: 78px;
+      font-size: 4.875rem;
     }
   }
 
   &__description {
-    max-width: 624px;
+    max-width: 39rem;
 
-    font-size: 24px;
-    line-height: 28.63px;
+    font-size: 1.5rem;
+    line-height: 1.79rem;
     color: variables.$color-default-light;
 
     &__emphasized {
-      padding-left: 4px;
+      padding-left: 0.25rem;
 
       color: variables.$color-default;
     }

@@ -172,13 +172,13 @@ html {
 }
 
 .container {
-  padding: 120px 40px;
+  padding: 7.5rem 2.5rem;
 }
 
 .section {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 3rem;
 
   &__row {
     display: flex;
@@ -186,7 +186,7 @@ html {
   }
 
   &-header__large {
-    font-size: 78px;
+    font-size: 4.875rem;
   }
 }
 
@@ -195,7 +195,7 @@ html {
 
   width: fit-content;
 
-  font-size: 32px;
+  font-size: 2rem;
   color: variables.$color-white-dim;
 }
 

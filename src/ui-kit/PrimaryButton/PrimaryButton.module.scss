@@ -5,19 +5,19 @@
   align-items: center;
 
   width: fit-content;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
 
   font-weight: 400;
   color: variables.$color-default;
 
   background-color: variables.$color-white;
-  border-radius: 32px;
+  border-radius: 2rem;
 }
 
 .button__default {
   @include button-styles;
 
-  font-size: 20px;
+  font-size: 1.25rem;
 
   &:hover {
     color: variables.$color-white;
@@ -29,11 +29,11 @@
 .button__large {
   @include button-styles;
 
-  padding: 21.86px 32.8px;
+  padding: 1.365rem 2.05rem;
 
-  font-size: 36px;
+  font-size: 2.25rem;
 
-  border-radius: 43.73px;
+  border-radius: 2.73rem;
 
   &:hover {
     color: variables.$color-main;

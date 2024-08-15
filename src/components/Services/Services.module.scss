@@ -6,8 +6,8 @@
 }
 
 .button__small {
-  margin-right: 24px;
-  margin-bottom: 32px;
+  margin-right: 1.5rem;
+  margin-bottom: 2rem;
 
   visibility: hidden;
   opacity: 0;
@@ -26,9 +26,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 1rem;
 
-    margin-top: 48px;
+    margin-top: 3rem;
   }
 
   &__item {
@@ -36,8 +36,8 @@
     align-items: flex-end;
 
     width: calc(100% * (1 / 3) - 80px);
-    min-width: 328px;
-    height: 300px;
+    min-width: 20.5rem;
+    height: 18.75rem;
 
     background-color: variables.$color-white-element;
     background-size: 0;
@@ -60,9 +60,9 @@
   }
 
   &__item-title {
-    max-width: 280px;
-    margin-bottom: 32px;
-    margin-left: 24px;
+    max-width: 17.5rem;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
 
     font-size: 32px;
     line-height: 36px;

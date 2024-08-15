@@ -2,15 +2,15 @@
 
 .gallery {
   display: flex;
-  gap: 8px;
+  gap: 0.5em;
 
   height: 700px;
-  margin-top: 48px;
+  margin-top: 3rem;
 
   &__item {
     overflow: hidden;
 
-    width: 167px;
+    width: 10.3125em;
 
     &__block {
       display: flex;
@@ -18,20 +18,20 @@
       align-items: flex-end;
       justify-content: space-between;
 
-      padding: 564px 24px 34px;
+      padding: 35.25em 1.5em 2em;
 
       &__info {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 1.5rem;
 
         &__title {
-          font-size: 52px;
+          font-size: 3.25rem;
           color: variables.$color-white;
         }
 
         &__details {
-          font-size: 20px;
+          font-size: 1.25rem;
           color: variables.$color-white;
           text-wrap: nowrap;
         }

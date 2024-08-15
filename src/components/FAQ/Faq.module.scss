@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
 
-  width: 780px;
+  width: 48.75em;
 
   &__faq {
     cursor: pointer;
@@ -14,8 +14,8 @@
     display: flex;
     flex-direction: column;
 
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
     &:hover {
       :global(.icon__active) {
@@ -32,9 +32,9 @@
         align-items: center;
         justify-content: center;
 
-        width: 48px;
-        height: 48px;
-        margin-right: 20px;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.25rem;
 
         :global(.icon__active) {
           fill: variables.$color-default;
@@ -42,9 +42,9 @@
       }
 
       &__question {
-        padding-top: 6px;
+        padding-top: 0.375rem;
 
-        font-size: 36px;
+        font-size: 2.25rem;
         line-height: 1.2;
       }
 
@@ -61,11 +61,11 @@
       overflow: hidden;
 
       max-height: 0;
-      margin-top: 10px;
-      margin-left: 68px;
+      margin-top: 0.625rem;
+      margin-left: 4.25rem;
 
-      font-size: 20px;
-      line-height: 23.86px;
+      font-size: 1.25rem;
+      line-height: 23.1.49rem;
       word-break: break-word;
       overflow-wrap: break-word;
 
@@ -76,7 +76,7 @@
         opacity 0.5s;
 
       &__opened {
-        max-height: 100px;
+        max-height: 6.25rem;
 
         opacity: 1;
       }
@@ -92,7 +92,7 @@
   display: block;
 
   width: 100%;
-  height: 1px;
+  height: 0.0625rem;
 
-  border-top: 1px solid variables.$color-default-divider;
+  border-top: 0.0625rem solid variables.$color-default-divider;
 }

@@ -3,35 +3,35 @@
 .hero-block {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875em;
 
   height: 900px;
-  padding: 0 40px;
+  padding: 0 2.5em;
 
   background-image: linear-gradient(90deg, rgb(0 0 0 / 0.3) 44%, rgb(0 0 0 / 0) 100%), url('@/assets/hero-block.jpeg');
   background-position: center;
   background-size: cover;
 
   &__title {
-    max-width: 720px;
-    margin-top: 300px;
+    max-width: 45rem;
+    margin-top: 18.75rem;
 
-    font-size: 172.68px;
-    line-height: 120.88px;
+    font-size: 10.8rem;
+    line-height: 7.5rem;
     color: variables.$color-white;
     vertical-align: middle;
   }
 
   &__description {
-    max-width: 720px;
-    padding-left: 7px;
+    max-width: 45rem;
+    padding-left: 0.45rem;
 
-    font-size: 23.24px;
+    font-size: 1.45rem;
     color: variables.$color-white;
   }
 
   &__button {
-    margin-top: 5px;
+    margin-top: 0.3125em;
   }
 
   :global(.primaryButton) {

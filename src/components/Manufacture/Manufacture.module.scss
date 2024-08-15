@@ -2,12 +2,12 @@
 
 .image-gallery {
   display: flex;
-  gap: 16px;
+  gap: 1em;
 
   width: 100%;
-  height: 500px;
+  height: 31.25em;
 
   &__item {
-    min-width: 442.67px;
+    min-width: 27.67em;
   }
 }

@@ -3,22 +3,22 @@
 .list-block {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 
   &__title {
-    font-size: 32px;
+    font-size: 2rem;
     color: variables.$color-white;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
     align-items: baseline;
 
     &__item {
-      font-size: 20px;
-      line-height: 23.86px;
+      font-size: 1.25rem;
+      line-height: 2.05rem;
       color: variables.$color-white-light;
     }
   }

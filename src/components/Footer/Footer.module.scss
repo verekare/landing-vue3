@@ -5,12 +5,12 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 50px;
+  padding: 3.125rem;
 
   background-color: variables.$color-main;
 
   &__header {
-    gap: 24px;
+    gap: 1.5em;
 
     & > *:first-child {
       color: variables.$color-white;
@@ -25,10 +25,10 @@
 .footer {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2em;
 
-  padding: 120px 50px;
-  padding-bottom: 50px;
+  padding: 7.5em 3.125em;
+  padding-bottom: 3.125em;
 
   background-color: variables.$color-default;
 
@@ -42,22 +42,22 @@
     &__info {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 2.5rem;
 
       &__title {
-        font-size: 78px;
+        font-size: 4.875em;
         color: variables.$color-white;
       }
 
       &__description {
-        max-width: 624px;
+        max-width: 39rem;
 
-        font-size: 24px;
-        line-height: 28.63px;
+        font-size: 1.5rem;
+        line-height: 1.79rem;
         color: variables.$color-white-light;
 
         &__emphasized {
-          padding-left: 4px;
+          padding-left: 0.25rem;
 
           color: variables.$color-white;
         }
@@ -67,9 +67,9 @@
     &__nav {
       display: flex;
       flex-direction: row;
-      gap: 80px;
+      gap: 5em;
 
-      margin-right: 50px;
+      margin-right: 2.125em;
     }
   }
 
@@ -80,20 +80,20 @@
     justify-content: space-between;
 
     &__copyright {
-      font-size: 16px;
+      font-size: 1em;
       color: variables.$color-white-light;
     }
 
     &__social-links {
       display: flex;
       flex-direction: row;
-      gap: 40px;
+      gap: 2.5em;
       align-items: center;
 
       color: variables.$color-white;
 
       &__item {
-        font-size: 20px;
+        font-size: 1.25em;
         white-space: nowrap;
       }
     }
@@ -102,7 +102,7 @@
 
 .divider {
   width: 100%;
-  height: 1px;
+  height: 0.0625em;
 
-  border-top: 1px solid variables.$color-white-border;
+  border-top: 0.0625em solid variables.$color-white-border;
 }
