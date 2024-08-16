@@ -4,14 +4,16 @@
       <img :class="$style['nav-bar__brand-block__logo']" alt="Company logo" src="@/assets/logo.svg" />
       <span :class="$style['nav-bar__brand-block__title']">Golden<br />Wood</span>
     </div>
-    <nav :class="$style['nav-bar__sections-list']">
-      <button :class="$style['nav-bar__sections-list__title']" v-for="section in NAV_SECTIONS">
+    <div :class="$style['nav-bar__menu']">
+    <nav :class="$style['nav-bar__menu__sections-list']">
+      <button :class="$style['nav-bar__menu__sections-list__title']" v-for="section in NAV_SECTIONS">
         <span>{{ section.name }}</span>
       </button>
     </nav>
-    <PrimaryButton :class="$style['nav-bar__contact']">
+    <PrimaryButton :class="$style['nav-bar__menu__contact']">
       <span>Связаться</span>
     </PrimaryButton>
+    </div>
   </div>
 </template>
 

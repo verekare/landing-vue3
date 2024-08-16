@@ -106,3 +106,12 @@
 
   border-top: 0.0625em solid variables.$color-white-border;
 }
+
+.link {
+  display: block;
+
+  width: fit-content;
+
+  font-size: 2rem;
+  color: variables.$color-white-dim;
+}

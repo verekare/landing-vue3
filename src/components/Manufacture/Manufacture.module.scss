@@ -1,6 +1,7 @@
 @use '@/styles/variables.scss';
 
 .image-gallery {
+  overflow: hidden;
   display: flex;
   gap: 1em;
 

@@ -3,7 +3,7 @@
 .hero-block {
   display: flex;
   flex-direction: column;
-  gap: 1.875em;
+  justify-content: space-between;
 
   height: 100vh;
   padding: 0 2.5em;
@@ -12,26 +12,39 @@
   background-position: center;
   background-size: cover;
 
-  &__title {
-    max-width: 45rem;
-    margin-top: 18.75rem;
-
-    font-size: 10.8rem;
-    line-height: 7.5rem;
-    color: variables.$color-white;
-    vertical-align: middle;
+  @include variables.md {
+    padding: 0 1.25em;
   }
 
-  &__description {
-    max-width: 45rem;
-    padding-left: 0.45rem;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em;
 
-    font-size: 1.45rem;
-    color: variables.$color-white;
-  }
+    max-width: 80vw;
+    margin-bottom: 10vh;
 
-  &__button {
-    margin-top: 0.3125em;
+    &__title {
+      font-size: 10.8rem;
+      line-height: 7.5rem;
+      color: variables.$color-white;
+      vertical-align: middle;
+
+      @include variables.sm {
+        font-size: 7rem;
+      }
+    }
+
+    &__description {
+      padding-left: 0.45rem;
+
+      font-size: 1.45rem;
+      color: variables.$color-white;
+    }
+
+    &__button {
+      margin-top: 0.3125em;
+    }
   }
 
   :global(.primaryButton) {

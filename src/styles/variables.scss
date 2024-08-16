@@ -9,11 +9,10 @@ $color-default-border: rgb(46 55 50 / 0.1);
 $color-default-shadow: rgb(46 55 50 / 0.3);
 $color-transparent: rgb(0 0 0 / 0);
 $color-main: #f60;
-$color-white: #fff;
+$color-white: #fefefe;
 $color-white-light: rgb(255 255 255 / 0.5);
 $color-white-dim: rgb(255 255 255 / 0.8);
 $color-white-border: rgb(255 255 255 / 0.1);
-$color-white-element: #fefefe;
 
 /* Fonts */
 
@@ -51,8 +50,20 @@ $breakpoints: (
 
 /* Mixins for responsive layout */
 
+@mixin sm {
+  @media (max-width: #{breakpoint(sm)}) {
+    @content;
+  }
+}
+
 @mixin md {
   @media (max-width: #{breakpoint(md)}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{breakpoint(lg)}) {
     @content;
   }
 }
@@ -60,6 +71,7 @@ $breakpoints: (
 /* Container */
 
 $container-max-widths: (
+  sm: 36em,
   md: 60em,
   lg: 80em,
 );

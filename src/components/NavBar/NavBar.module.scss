@@ -3,60 +3,92 @@
 .nav-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   width: 100%;
-  padding: 15px 0;
+  padding: 1em 0;
 
-  font-size: 20px;
+  font-size: 1.25em;
   color: variables.$color-white;
 
-  border-bottom: 1px solid #ffffff1a;
+  border-bottom: 0.0625em solid #ffffff1a;
 
   &__brand-block {
     display: flex;
-    gap: 1px;
+    gap: 0.0625em;
     align-items: center;
 
     &__title {
-      font-size: 20px;
+      font-size: 1.25em;
       font-weight: 500;
-      line-height: 20px;
+      line-height: 1em;
+
+      @include variables.md {
+        font-size: 1em;
+      }
     }
 
     &__logo {
-      width: 50px;
-      height: 50px;
-    }
-  }
+      width: 3.8rem;
+      height: 3.8rem;
 
-  &__sections-list {
-    display: flex;
-    gap: 40px;
-
-    margin: 0 90px;
-
-    &__title {
-      font-size: 20px;
-      text-transform: uppercase;
-
-      &:hover {
-        color: variables.$color-main;
+      @include variables.md {
+        width: 3.2rem;
+        height: 3.2rem;
       }
     }
   }
 
-  &__contact {
-    margin-right: 20px;
-    margin-left: auto;
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    color: variables.$color-white;
+    min-width: 85vw;
 
-    background-color: variables.$color-main;
+    @include variables.sm {
+      visibility: hidden;
+    }
 
-    &:hover {
-      color: variables.$color-main;
+    &__sections-list {
+      display: flex;
+      gap: 2.5rem;
 
-      background-color: variables.$color-white;
+      margin: 0 5em;
+
+      @include variables.md {
+        gap: 1.5em;
+
+        margin: 0 50px;
+      }
+
+      &__title {
+        font-size: 1.25rem;
+        text-transform: uppercase;
+
+        @include variables.md {
+          font-size: 1.15rem;
+        }
+
+        &:hover {
+          color: variables.$color-main;
+        }
+      }
+    }
+
+    &__contact {
+      margin-right: 20px;
+      margin-left: auto;
+
+      color: variables.$color-white;
+
+      background-color: variables.$color-main;
+
+      &:hover {
+        color: variables.$color-main;
+
+        background-color: variables.$color-white;
+      }
     }
   }
 }

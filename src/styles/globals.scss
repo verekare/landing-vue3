@@ -172,7 +172,8 @@ html {
 }
 
 .container {
-  padding: 7.5rem 2.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .section {
@@ -199,8 +200,23 @@ html {
   color: variables.$color-white-dim;
 }
 
+@include variables.sm {
+  .container {
+    max-width: variables.container-max-width(sm);
+    padding: 6rem 1.25rem;
+  }
+}
+
 @include variables.md {
   .container {
     max-width: variables.container-max-width(md);
+    padding: 6rem 2.5rem;
+  }
+}
+
+@include variables.lg {
+  .container {
+    max-width: variables.container-max-width(lg);
+    padding: 7.5rem 2.5rem;
   }
 }

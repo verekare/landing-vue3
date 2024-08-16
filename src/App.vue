@@ -9,7 +9,6 @@ import Footer from './components/Footer/Footer.vue';
 </script>
 
 <template>
-  <div>
     <HeroBlock />
     <Catalog />
     <Services />
@@ -17,5 +16,4 @@ import Footer from './components/Footer/Footer.vue';
     <Portfolio />
     <Faq />
     <Footer />
-  </div>
 </template>

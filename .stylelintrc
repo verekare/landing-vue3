@@ -6,6 +6,16 @@
   ],
   "plugins": ["stylelint-order"],
   "rules": {
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "include"
+      },
+      "rules"
+    ],
     "string-quotes": "single",
     "alpha-value-notation": "number",
     "max-line-length": null,
