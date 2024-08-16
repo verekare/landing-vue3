@@ -6,11 +6,7 @@
   display: flex;
   flex-direction: column;
 
-  width: 48.75em;
-
-  @include variables.sm {
-    width: min-content;
-  }
+  width: 100%;
 
   &__faq {
     cursor: pointer;
@@ -26,6 +22,11 @@
       margin-bottom: 1rem;
     }
 
+    @include variables.md {
+      margin-top: 1.3rem;
+      margin-bottom: 1.3rem;
+    }
+
     &:hover {
       :global(.icon__active) {
         fill: variables.$color-main;
@@ -35,6 +36,8 @@
     &__header {
       display: flex;
       align-items: center;
+
+      margin-right: 3em;
 
       &__marker {
         display: flex;
@@ -59,6 +62,10 @@
         @include variables.sm {
           font-size: 1.8rem;
         }
+
+        @include variables.md {
+          font-size: 1.8rem;
+        }
       }
 
       &__opened {
@@ -78,7 +85,7 @@
       margin-left: 4.25rem;
 
       font-size: 1.25rem;
-      line-height: 23.1.49rem;
+      line-height: 1.49rem;
       word-break: break-word;
       overflow-wrap: break-word;
 
