@@ -39,9 +39,9 @@ $font-family-default: 'Golden Wood', arial, helvetica, sans-serif;
 /* Breakpoints */
 
 $breakpoints: (
-  sm: 40em,
-  md: 64em,
-  lg: 100em,
+  sm: 640px,
+  md: 1024px,
+  lg: 1600px,
 );
 
 @function breakpoint($key) {
@@ -71,9 +71,9 @@ $breakpoints: (
 /* Container */
 
 $container-max-widths: (
-  sm: 36em,
-  md: 60em,
-  lg: 80em,
+  sm: 576px,
+  md: 960px,
+  lg: 1280px,
 );
 
 @function container-max-width($key) {

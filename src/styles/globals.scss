@@ -172,6 +172,7 @@ html {
 }
 
 .container {
+  width: 100vw;
   margin-right: auto;
   margin-left: auto;
 }
@@ -184,6 +185,11 @@ html {
   &__row {
     display: flex;
     flex-direction: row;
+
+    @include variables.sm {
+      flex-direction: column;
+      gap: 120px;
+    }
   }
 
   &-header__large {
@@ -191,19 +197,10 @@ html {
   }
 }
 
-.anchorLink {
-  display: block;
-
-  width: fit-content;
-
-  font-size: 2rem;
-  color: variables.$color-white-dim;
-}
-
 @include variables.sm {
   .container {
     max-width: variables.container-max-width(sm);
-    padding: 6rem 1.25rem;
+    padding: 5rem 1.25rem;
   }
 }
 

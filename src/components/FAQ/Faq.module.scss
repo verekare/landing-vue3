@@ -8,6 +8,10 @@
 
   width: 48.75em;
 
+  @include variables.sm {
+    width: min-content;
+  }
+
   &__faq {
     cursor: pointer;
 
@@ -16,6 +20,11 @@
 
     margin-top: 2rem;
     margin-bottom: 2rem;
+
+    @include variables.sm {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
 
     &:hover {
       :global(.icon__active) {
@@ -46,6 +55,10 @@
 
         font-size: 2.25rem;
         line-height: 1.2;
+
+        @include variables.sm {
+          font-size: 1.8rem;
+        }
       }
 
       &__opened {

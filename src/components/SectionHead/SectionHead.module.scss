@@ -9,8 +9,16 @@
     font-size: 3rem;
     color: variables.$color-default;
 
+    @include variables.sm {
+      font-size: 2.625rem;
+    }
+
     &__large {
       font-size: 4.875rem;
+
+      @include variables.sm {
+        font-size: 2.625rem;
+      }
     }
   }
 
@@ -20,6 +28,10 @@
     font-size: 1.5rem;
     line-height: 1.79rem;
     color: variables.$color-default-light;
+
+    @include variables.sm {
+      font-size: 1.25rem;
+    }
 
     &__emphasized {
       padding-left: 0.25rem;

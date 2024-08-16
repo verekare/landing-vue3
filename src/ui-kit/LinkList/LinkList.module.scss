@@ -16,10 +16,19 @@
     gap: 1rem;
     align-items: baseline;
 
+    @include variables.sm {
+      gap: 0.3em;
+    }
+
+    @include variables.md {
+      gap: 0.7em;
+    }
+
     &__item {
       font-size: 1.25rem;
       line-height: 2.05rem;
       color: variables.$color-white-light;
+      white-space: nowrap;
     }
   }
 }
