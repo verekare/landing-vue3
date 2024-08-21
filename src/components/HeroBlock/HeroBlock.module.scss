@@ -26,12 +26,13 @@
 
     &__title {
       font-size: 10.8rem;
-      line-height: 7.5rem;
+      line-height: 0.694;
       color: variables.$color-white;
       vertical-align: middle;
 
       @include variables.sm {
-        font-size: 7rem;
+        font-size: 5.5rem;
+        line-height: 0.77;
       }
     }
 
