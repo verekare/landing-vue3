@@ -32,5 +32,7 @@
         variables.$color-default-shadow 35%,
         variables.$color-transparent 65%
       );
+
+    transition: opacity 0.2s ease;
   }
 }

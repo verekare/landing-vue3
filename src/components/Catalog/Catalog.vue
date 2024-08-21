@@ -2,23 +2,29 @@
   <div class="container">
     <div class="section">
       <SectionHead :content="content.catalog" />
-      <div :class="$style.gallery" ref="slider">
-        <ImageCard
-          v-for="(room, index) in SERVICES_ROOMS.list"
-          :key="index"
-          :data-index="index"
+      <Swiper 
+        :slides-per-view="SERVICES_ROOMS.list.length" :space-between="8"
+        @swiper="onSwiper" @slideChange="onSlideChange"
+      >
+        <SwiperSlide 
+          v-for="(roomCard, index) in SERVICES_ROOMS.list" :key="index" 
           :class="$style.gallery__item"
-          :image-path="room.path"
+          :style="{ width: index === activeIndex ? '50vw' : '8vw' }"
         >
-          <div :class="$style.gallery__item__block">
-            <div :class="$style.gallery__item__block__info">
-              <h3 :class="$style.gallery__item__block__info__title">{{ room.name }}</h3>
-              <p :class="$style.gallery__item__block__info__details">{{ room.details }}</p>
+          <ImageCard
+            :class="[$style.gallery__item, isActive && $style.active ]"
+            :image-path="roomCard.path"
+          >
+            <div :class="$style.gallery__item__block">
+              <div :class="$style.gallery__item__block__info">
+                <h3 :class="$style.gallery__item__block__info__title">{{ roomCard.name }}</h3>
+                <p :class="$style.gallery__item__block__info__details">{{ roomCard.details }}</p>
+              </div>
+              <SecondaryButton :iconPath="'/src/assets/icon_arrow.svg'" />
             </div>
-            <SecondaryButton :iconPath="'/src/assets/icon_arrow.svg'" />
-          </div>
         </ImageCard>
-      </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   </div>
 </template>
@@ -29,72 +35,20 @@ import content from '@/constants/sectionHeaders';
 import { SERVICES_ROOMS } from '@/constants/services';
 import ImageCard from '@/ui-kit/ImageCard/ImageCard.vue';
 import SecondaryButton from '@/ui-kit/SecondaryButton/SecondaryButton.vue';
-import { ref, onMounted } from 'vue';
-import gsap from 'gsap';
+import { ref, onMounted, computed } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+// import { Autoplay } from 'swiper/modules';
 
-const slider = ref(null);
-const timeline = gsap.timeline();
-onMounted(() => {
-  const imageGallery = slider.value.children;
-  // console.log(slider.value.children);
-  // for (let i = 0; i < imageGallery.length; i++) {
-  //   let imageCard = imageGallery[i];
-  //   console.log(imageCard);
-  //   timeline.to(imageCard, {
-  //     width: 650,
-  //     duration: 2,
-  //     delay: i * 4,
-  //   })
-  //   .to(imageCard, {
-  //     width: 165,
-  //     duration: 2,
-  //   })
-  // }
-})
+// const modules = [Autoplay];
 
-const cardsTimeline = [];
-
-const onEnter = (element, done) => {
-  const delay = element.dataset.index;
-  // timeline.set(element, { width: 165 });
-
-  // console.log('on Enter', timeline, delay);
-  // });
-
-  // cardsTimeline.push(timeline);
-  // console.log('cards Timeline has', cardsTimeline);
+const onSwiper = (swiper) => {
+  console.log(swiper);
+};
+const onSlideChange = () => {
+  console.log('slide change');
 };
 
-const onAfterEnter = (element, done) => {
-  const timeline = gsap.timeline({
-    onComplete: done,
-    defaults: {
-      duration: 2,
-      // repeat: 3,
-      // repeatDelay: 24,
-    },
-  });
-
-  const delay = element.dataset.index;
-  // const timeline = cardsTimeline[delay];
-  console.log('on After Enter', delay);
-  console.log(timeline);
-  // const setOpened = gsap.set(element, { width: 650, delay: delay * 4 });
-  if (timeline) {
-    timeline
-      .to(element, { width: 650, delay: delay * 4, duration: 2 })
-      .to({}, 2, {})
-      .to(element, { width: 165, delay: delay * 4, duration: 2 });
-    // .to(
-    //   element.nextElementSibling,
-    //   { width: 165, delay: delay * 4, duration: 2 },
-    //   '-=1'
-    // );
-  }
-  console.log('on After Enter: Element number', delay);
-};
-
-// const onAfterLeave = (element) => { }
 </script>
 
 <style module lang="scss">
