@@ -2,16 +2,9 @@
   <div class="container">
     <div class="section">
       <SectionHead :content="content.catalog" />
-      <Swiper 
-        :slides-per-view="SERVICES_ROOMS.list.length" :space-between="8"
-        @swiper="onSwiper" @slideChange="onSlideChange"
-      >
-        <SwiperSlide 
-          v-for="(roomCard, index) in SERVICES_ROOMS.list" :key="index" 
-          :class="$style.gallery__item"
-          :style="{ width: index === activeIndex ? '50vw' : '8vw' }"
-        >
+        <div :class="$style.gallery" ref="slider">
           <ImageCard
+            v-for="(roomCard, index) in SERVICES_ROOMS.list" :key="index" :data-index="index"
             :class="[$style.gallery__item, isActive && $style.active ]"
             :image-path="roomCard.path"
           >
@@ -22,9 +15,8 @@
               </div>
               <SecondaryButton :iconPath="'/src/assets/icon_arrow.svg'" />
             </div>
-        </ImageCard>
-        </SwiperSlide>
-      </Swiper>
+          </ImageCard>
+        </div>
     </div>
   </div>
 </template>
@@ -36,21 +28,20 @@ import { SERVICES_ROOMS } from '@/constants/services';
 import ImageCard from '@/ui-kit/ImageCard/ImageCard.vue';
 import SecondaryButton from '@/ui-kit/SecondaryButton/SecondaryButton.vue';
 import { ref, onMounted, computed } from 'vue';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
-// import { Autoplay } from 'swiper/modules';
+import gsap from 'gsap';
 
-// const modules = [Autoplay];
-const activeIndex = ref(0);
+const slider = ref(null);
 
-const onSwiper = (swiper) => {
-  console.log(swiper);
-};
-const onSlideChange = (swiper) => {
-  console.log('slide change');
-  console.log(swiper);
-  activeIndex.value = swiper.activeIndex
-};
+onMounted(() => {
+  const timeline = gsap.timeline();
+  const gallery = Array.from(slider.value.children);
+
+  gallery.forEach((el, index) => {
+    timeline.to(el, { width: 1200, delay: index * 4, duration: 2 })
+            .to(el, { width: 165, delay: index * 4, duration: 2 });
+    console.log(timeline);
+  })
+})
 
 </script>
 
