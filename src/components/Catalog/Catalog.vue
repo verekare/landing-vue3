@@ -41,12 +41,15 @@ import 'swiper/css';
 // import { Autoplay } from 'swiper/modules';
 
 // const modules = [Autoplay];
+const activeIndex = ref(0);
 
 const onSwiper = (swiper) => {
   console.log(swiper);
 };
-const onSlideChange = () => {
+const onSlideChange = (swiper) => {
   console.log('slide change');
+  console.log(swiper);
+  activeIndex.value = swiper.activeIndex
 };
 
 </script>
