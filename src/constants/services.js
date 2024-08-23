@@ -7,18 +7,18 @@ export const NAV_SECTIONS = [
 ];
 
 export const SERVICES = [
-  { name: 'Индивидуальный дизайн мебели', path: '/src/assets/hall.jpg' },
-  { name: 'Проектирование и разработка мебели', path: '/src/assets/hall.jpg' },
-  { name: 'Изготовление мебели', path: '/src/assets/hall.jpg' },
-  { name: 'Установка и монтаж мебели', path: '/src/assets/hall.jpg' },
-  { name: 'Индивидуальные проекты', path: '/src/assets/hall.jpg' },
-  { name: 'Комплексный дизайн интерьера', path: '/src/assets/hall.jpg' },
+  { name: 'Индивидуальный дизайн мебели', path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419485/golden-wood_images/hall.jpg' },
+  { name: 'Проектирование и разработка мебели', path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419485/golden-wood_images/hall.jpg' },
+  { name: 'Изготовление мебели', path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419485/golden-wood_images/hall.jpg' },
+  { name: 'Установка и монтаж мебели', path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419485/golden-wood_images/hall.jpg' },
+  { name: 'Индивидуальные проекты', path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419485/golden-wood_images/hall.jpg' },
+  { name: 'Комплексный дизайн интерьера', path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419485/golden-wood_images/hall.jpg' },
 ];
 
 export const MANUFACTURE_IMAGE_PATHS = [
-  { path: '/src/assets/manufacture2.jpg' },
-  { path: '/src/assets/manufacture1.jpeg' },
-  { path: '/src/assets/manufacture3.jpeg' },
+  { path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419567/golden-wood_images/manufacture2.jpg' },
+  { path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419540/golden-wood_images/manufacture1.jpg' },
+  { path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419576/golden-wood_images/manufacture3.jpg' },
 ];
 
 export const SERVICES_ROOMS = {
@@ -27,32 +27,32 @@ export const SERVICES_ROOMS = {
     {
       name: 'Кухни',
       details: 'Arpa, Cleaf, Egger, Alvic Syncrone',
-      path: '/src/assets/kitchen.jpeg',
+      path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419504/golden-wood_images/kitchen.jpg',
     },
     {
       name: 'Гостиные',
       details: 'Arpa, Cleaf, Egger, Alvic Syncrone',
-      path: '/src/assets/living-room.jpeg',
+      path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419524/golden-wood_images/living-room.jpg',
     },
     {
       name: 'Спальни',
       details: 'Arpa, Cleaf, Egger, Alvic Syncrone',
-      path: '/src/assets/bedroom.jpg',
+      path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724420193/golden-wood_images/bedroom.jpg',
     },
     {
       name: 'Прихожие',
       details: 'Arpa, Cleaf, Egger, Alvic Syncrone',
-      path: '/src/assets/hall.jpg',
+      path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419485/golden-wood_images/hall.jpg',
     },
     {
       name: 'Детские',
       details: 'Arpa, Cleaf, Egger, Alvic Syncrone',
-      path: '/src/assets/childrens.jpg',
+      path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419470/golden-wood_images/childrens.jpg',
     },
     {
       name: 'Кабинеты',
       details: 'Arpa, Cleaf, Egger, Alvic Syncrone',
-      path: '/src/assets/cabinet.jpg',
+      path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724419454/golden-wood_images/cabinet.jpg',
     },
   ],
 };

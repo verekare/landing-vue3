@@ -185,6 +185,8 @@ html {
     display: flex;
     flex-direction: row;
 
+    width: inherit;
+
     @include variables.sm {
       flex-direction: column;
       gap: 80px;
