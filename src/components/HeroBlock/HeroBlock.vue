@@ -1,6 +1,6 @@
 <template>
   <div 
-    :style="{ backgroundImage: `linear-gradient(90deg, rgb(0 0 0 / 0.3) 44%, rgb(0 0 0 / 0) 100%), url(${heroImage})` }"
+    :style="{ backgroundImage: `linear-gradient(90deg, rgb(0 0 0 / 0.3) 44%, rgb(0 0 0 / 0) 100%), url(${HERO_IMAGE_PATH.path})` }"
     :class="$style['hero-block']" 
   >
     <NavBar />
@@ -19,6 +19,7 @@
 // import { Cloudinary } from '@cloudinary/url-gen';
 import NavBar from '@/components/NavBar/NavBar.vue';
 import PrimaryButton from '@/ui-kit/PrimaryButton/PrimaryButton.vue';
+import { HERO_IMAGE_PATH } from '@/constants/services';
 
 // const cld = new Cloudinary({
 //   cloud: {
@@ -28,7 +29,6 @@ import PrimaryButton from '@/ui-kit/PrimaryButton/PrimaryButton.vue';
 // })
 
 // const urlImage = cld.image('golden-wood_images/hero-block');
-const heroImage = 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724420039/golden-wood_images/hero-block.jpg';
 </script>
 
 <style module lang="scss">

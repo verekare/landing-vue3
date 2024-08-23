@@ -1,3 +1,7 @@
+export const HERO_IMAGE_PATH = {
+  path: 'https://res.cloudinary.com/depmjjxzk/image/upload/v1724420039/golden-wood_images/hero-block.jpg'
+}
+
 export const NAV_SECTIONS = [
   { name: 'Каталог' },
   { name: 'Услуги' },

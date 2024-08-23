@@ -185,7 +185,7 @@ html {
     display: flex;
     flex-direction: row;
 
-    width: inherit;
+    max-width: 90vw;
 
     @include variables.sm {
       flex-direction: column;
