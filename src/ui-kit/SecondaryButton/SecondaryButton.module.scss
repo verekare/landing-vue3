@@ -14,7 +14,7 @@
   &:hover {
     background-color: variables.$color-main;
 
-    :global(.colorElement) {
+    :global(.icon__active) {
       fill: variables.$color-white;
     }
   }
