@@ -6,13 +6,49 @@
 
   margin-top: 3rem;
 
-  &__item {
-    overflow: hidden;
+  @include variables.sm {
+    flex-direction: column;
+  }
 
-    width: 10vw;
+  @include variables.md {
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+
+    width: 12vw;
     height: 83vh;
 
-    transition: width 0.5s ease;
+    transition: width 0.7s ease-in-out;
+
+    @include variables.sm {
+      width: 83vw;
+      height: 10vh;
+
+      transition: height 0.6s ease-in-out;
+    }
+
+    @include variables.md {
+      width: 83vw;
+      height: 10vh;
+
+      transition: height 0.6s ease-in-out;
+    }
+
+    &__active {
+      width: 38vw;
+
+      @include variables.sm {
+        width: 83vw;
+        height: 40vh;
+      }
+
+      @include variables.md {
+        width: 83vw;
+        height: 40vh;
+      }
+    }
 
     &__block {
       display: flex;
@@ -20,7 +56,17 @@
       align-items: flex-end;
       justify-content: space-between;
 
-      padding: 35.25em 1.5em 2em;
+      width: inherit;
+      margin-bottom: 1.85em;
+      padding: 1.5em 2em;
+
+      @include variables.sm {
+        margin-bottom: 0.85em;
+      }
+
+      @include variables.md {
+        margin-bottom: 0.85em;
+      }
 
       &__info {
         display: flex;
@@ -40,4 +86,19 @@
       }
     }
   }
+}
+
+/* Transitions */
+
+.info-enter-active {
+  transition: opacity 200ms ease-in 300ms;
+}
+
+.info-leave-active {
+  transition: opacity 200ms ease-out;
+}
+
+.info-enter-from,
+.info-leave-to {
+  opacity: 0;
 }

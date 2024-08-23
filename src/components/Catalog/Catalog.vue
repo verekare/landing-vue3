@@ -2,18 +2,19 @@
   <div class="container">
     <div class="section">
       <SectionHead :content="content.catalog" />
-      <swiper-container 
-        :slides-per-view="SERVICES_ROOMS.list.length" :space-between="8"
-        @swiper="onSwiper" @swiperslidechange="onSlideChange" ref="swiper"
-      >
-        <SwiperSlide 
+      <div :class="$style.gallery">
+        <ImageCard
           v-for="(roomCard, index) in SERVICES_ROOMS.list" :key="index" 
-          :class="$style.gallery__item"
+          :class="[$style.gallery__item, (index === activeIndex) && $style.gallery__item__active ]"
+          :image-path="roomCard.path"
+          :isActive="(index === activeIndex)"
         >
-          <ImageCard
-            :class="[$style.gallery__item, isActive && $style.active ]"
-            :style="{ width: index === activeIndex ? '50vw' : '8vw' }"
-            :image-path="roomCard.path"
+          <Transition 
+            mode="out-in" appear
+            :enter-active-class="$style['info-enter-active']"
+            :leave-active-class="$style['info-leave-active']"
+            :enter-from-class="$style['info-enter-from']"
+            :leave-to-class="$style['info-leave-to']"
           >
             <div :class="$style.gallery__item__block" v-show="index === activeIndex">
               <div :class="$style.gallery__item__block__info">
@@ -22,9 +23,9 @@
               </div>
               <SecondaryButton :iconPath="'/src/assets/icon_arrow.svg'" />
             </div>
-        </ImageCard>
-        </SwiperSlide>
-      </swiper-container>
+          </Transition>
+      </ImageCard>
+      </div>
     </div>
   </div>
 </template>
@@ -35,27 +36,24 @@ import content from '@/constants/sectionHeaders';
 import { SERVICES_ROOMS } from '@/constants/services';
 import ImageCard from '@/ui-kit/ImageCard/ImageCard.vue';
 import SecondaryButton from '@/ui-kit/SecondaryButton/SecondaryButton.vue';
-import { ref, computed } from 'vue';
-import { register } from 'swiper/element/bundle';
-import 'swiper/css';
-import Swiper from 'swiper';
-
-register();
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const activeIndex = ref(0);
-// const swiper = new Swiper(swiper)
+const intervalId = ref(null);
 
-// const isActive = computed((swiper) => activeIndex.value === swiper.activeIndex)
+onMounted(() => {
+  intervalId.value = setInterval(() => {
+    if (activeIndex.value < SERVICES_ROOMS.list.length - 1) {
+      activeIndex.value++;
+    } else {
+      activeIndex.value = 0
+    }
+  }, 4000)
+})
 
-const onSwiper = (swiper) => {
-  console.log(swiper);
-};
-const onSlideChange = (e) => {
-  console.log(e);
-  console.log('slide change');
-  console.log(swiper);
-  activeIndex.value = swiper.activeIndex
-};
+onUnmounted(() => {
+  clearInterval(intervalId.value)
+})
 
 </script>
 
