@@ -1,6 +1,6 @@
 <template>
   <div :class="$style['image-card']" :style="{ backgroundImage: 'url(' + imagePath + ')' }">
-      <slot></slot>
+    <slot></slot>
     <div :class="$style['image-card__gradient']" v-show="props.isActive"></div>
   </div>
 </template>

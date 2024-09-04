@@ -25,6 +25,7 @@
         variables.$color-default-shadow 35%,
         variables.$color-transparent 65%
       );
+    border-radius: 0.625rem;
 
     transition: opacity 0.2s ease;
   }

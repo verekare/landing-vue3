@@ -2,8 +2,9 @@
 
 .gallery {
   display: flex;
-  gap: 0.5em;
+  gap: 8px;
 
+  width: 100%;
   margin-top: 3rem;
 
   @include variables.sm {
@@ -17,10 +18,10 @@
   &__item {
     display: flex;
 
-    width: 12vw;
+    width: 8vw;
     height: 75vh;
 
-    transition: width 0.7s ease-in-out;
+    transition: width 0.4s ease;
 
     @include variables.sm {
       width: 83vw;
@@ -36,7 +37,7 @@
       transition: height 0.6s ease-in-out;
     }
 
-    &__active {
+    &--active {
       width: 38vw;
 
       @include variables.sm {
@@ -47,6 +48,10 @@
       @include variables.md {
         width: 83vw;
         height: 40vh;
+      }
+
+      .gallery__item__block {
+        opacity: 1;
       }
     }
 
@@ -59,6 +64,10 @@
       width: inherit;
       margin-bottom: 1.85em;
       padding: 1.5em 2em;
+
+      opacity: 0;
+
+      transition: opacity 0.3s ease;
 
       @include variables.sm {
         margin-bottom: 0.85em;
@@ -86,19 +95,4 @@
       }
     }
   }
-}
-
-/* Transitions */
-
-.info-enter-active {
-  transition: opacity 200ms ease-in 300ms;
-}
-
-.info-leave-active {
-  transition: opacity 200ms ease-out;
-}
-
-.info-enter-from,
-.info-leave-to {
-  opacity: 0;
 }

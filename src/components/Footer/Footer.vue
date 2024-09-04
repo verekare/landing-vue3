@@ -15,7 +15,7 @@
             >{{ text.content }}</span
           >
         </div>
-        <a :href="'mailto:' + content.footer.path" :class="$style.link">
+        <a :href="'mailto:' + content.footer.link" :class="$style.link">
           {{ content.footer.link }}
         </a>
       </div>
