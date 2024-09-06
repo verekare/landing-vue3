@@ -1,14 +1,15 @@
 <template>
   <button :class="$style.button__small">
-    <span :class="$style['icon-block']">
-      <InlineSvg :src="iconPath"></InlineSvg>
-    </span>
+    <Icon :isBig="true" :iconPath="iconPath" />
   </button>
 </template>
 <script setup>
-import InlineSvg from 'vue-inline-svg';
+import Icon from '@/ui-kit/Icon/Icon.vue';
 defineProps({
-  iconPath: String,
+  iconPath: {
+    type: String,
+    required: true,
+  }
 });
 </script>
 

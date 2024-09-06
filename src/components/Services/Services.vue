@@ -11,7 +11,7 @@
           <h4 :class="$style['services__item-title']">{{ service.name }}</h4>
           <SecondaryButton
             :class="$style.button__small"
-            :iconPath="'/src/assets/icon_arrow.svg'"
+            :iconPath="ICONS_PATHS.arrow"
           ></SecondaryButton>
         </ImageCard>
       </div>
@@ -25,6 +25,7 @@ import ImageCard from '@/ui-kit/ImageCard/ImageCard.vue';
 import content from '@/constants/sectionHeaders.js';
 import { SERVICES } from '@/constants/services';
 import SecondaryButton from '@/ui-kit/SecondaryButton/SecondaryButton.vue';
+import { ICONS_PATHS } from '@/constants/icons';
 </script>
 
 <style module lang="scss">

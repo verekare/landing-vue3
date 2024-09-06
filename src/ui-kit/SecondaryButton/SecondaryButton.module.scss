@@ -2,7 +2,6 @@
 
 .button__small {
   display: flex;
-  align-items: center;
 
   width: 5.25rem;
   height: 3.75rem;
@@ -14,22 +13,8 @@
   &:hover {
     background-color: variables.$color-main;
 
-    :global(.icon__active) {
+    :global(.icon--active) {
       fill: variables.$color-white;
     }
-  }
-}
-
-.icon-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  width: 5.25rem;
-  height: 2.8125rem;
-
-  svg {
-    width: 100%;
   }
 }

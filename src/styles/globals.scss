@@ -162,8 +162,9 @@ textarea {
 
 body,
 html {
-  height: 100%;
   overflow-x: hidden;
+
+  height: 100%;
 
   font-family: variables.$font-family-default;
   font-weight: 400;
@@ -215,7 +216,7 @@ html {
 
 @include variables.lg {
   .container {
-    // max-width: variables.container-max-width(lg);
+    max-width: variables.container-max-width(lg);
     padding: 7.5rem 2.5rem;
   }
 }

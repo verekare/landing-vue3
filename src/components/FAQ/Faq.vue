@@ -10,16 +10,16 @@
               <div :class="$style.faqs__faq__header__marker">
                 <Icon
                   :iconPath="openedStates[index] ? ICONS_PATHS.minus : ICONS_PATHS.plus"
-                  :class="[openedStates[index] && style.icon__active]"
+                  :class="[openedStates[index] && style['icon--active']]"
                 />
               </div>
               <h3
-                :class="[style.faqs__faq__header__question, openedStates[index] && style.faqs__faq__header__question__opened]"
+                :class="[style.faqs__faq__header__question, openedStates[index] && style['faqs__faq__header__question--opened']]"
               >
                 {{ faq.question }}
               </h3>
             </div>
-            <div :class="[style.faqs__faq__answer, openedStates[index] && style.faqs__faq__answer__opened]">
+            <div :class="[style.faqs__faq__answer, openedStates[index] && style['faqs__faq__answer--opened']]">
               <p>{{ faq.answer }}</p>
             </div>
           </div>

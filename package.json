@@ -13,6 +13,7 @@
   "dependencies": {
     "@cloudinary/url-gen": "^1.20.0",
     "@cloudinary/vue": "^1.12.1",
+    "gsap": "^3.12.5",
     "vue": "^3.4.21",
     "vue-inline-svg": "^3.1.3"
   },

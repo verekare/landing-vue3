@@ -26,7 +26,7 @@
     }
 
     &:hover {
-      :global(.icon__active) {
+      :global(.icon--active) {
         fill: variables.$color-main;
       }
     }
@@ -46,7 +46,7 @@
         height: 3rem;
         margin-right: 1.25rem;
 
-        :global(.icon__active) {
+        :global(.icon--active) {
           fill: variables.$color-default;
         }
       }
@@ -57,19 +57,15 @@
         font-size: 2.25rem;
         line-height: 1.2;
 
-        @include variables.sm {
-          font-size: 1.8rem;
-        }
-
         @include variables.md {
           font-size: 1.8rem;
         }
       }
 
-      &__opened {
+      &--opened {
         color: variables.$color-main;
 
-        :global(.icon__active) {
+        :global(.icon--active) {
           fill: variables.$color-main;
         }
       }
@@ -93,8 +89,8 @@
         max-height 0.5s,
         opacity 0.5s;
 
-      &__opened {
-        max-height: 6.25rem;
+      &--opened {
+        max-height: 7.65rem;
 
         opacity: 1;
       }
@@ -102,7 +98,7 @@
   }
 }
 
-.icon__active {
+.icon--active {
   transform: rotate(180deg);
 }
 

@@ -71,10 +71,6 @@
 
       margin-right: 2em;
 
-      @include variables.sm {
-        gap: 1.25em;
-      }
-
       @include variables.md {
         gap: 1.25em;
       }
@@ -82,10 +78,6 @@
       &__title {
         font-size: 4.875em;
         color: variables.$color-white;
-
-        @include variables.sm {
-          font-size: 3em;
-        }
 
         @include variables.md {
           font-size: 3em;
@@ -123,10 +115,6 @@
 
       margin-right: 2.125em;
 
-      @include variables.sm {
-        gap: 2em;
-      }
-
       @include variables.md {
         gap: 2em;
       }
@@ -138,11 +126,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    @include variables.sm {
-      flex-direction: column-reverse;
-      gap: 1.8em;
-    }
 
     @include variables.md {
       flex-direction: column-reverse;

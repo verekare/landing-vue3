@@ -1,5 +1,5 @@
 <template>
-  <span :class="$style['icon-block']">
+  <span :class="[isBig ? $style['icon-block--big'] : $style['icon-block']]">
     <InlineSvg :src="iconPath"></InlineSvg>
   </span>
 </template>
@@ -12,6 +12,10 @@ defineProps({
     type: String,
     required: true,
   },
+  isBig: {
+    type: Boolean,
+    required: false,
+  }
 });
 </script>
 

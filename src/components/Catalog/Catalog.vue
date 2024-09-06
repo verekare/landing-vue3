@@ -15,7 +15,7 @@
                 <h3 :class="$style.gallery__item__block__info__title">{{ roomCard.name }}</h3>
                 <p :class="$style.gallery__item__block__info__details">{{ roomCard.details }}</p>
               </div>
-              <SecondaryButton :iconPath="'/src/assets/icon_arrow.svg'" />
+              <SecondaryButton :iconPath="ICONS_PATHS.arrow" />
             </div>
       </ImageCard>
       </div>
@@ -29,6 +29,7 @@ import content from '@/constants/sectionHeaders';
 import { SERVICES_ROOMS } from '@/constants/services';
 import ImageCard from '@/ui-kit/ImageCard/ImageCard.vue';
 import SecondaryButton from '@/ui-kit/SecondaryButton/SecondaryButton.vue';
+import { ICONS_PATHS } from '@/constants/icons';
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const activeIndex = ref(0);

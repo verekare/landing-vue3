@@ -7,10 +7,6 @@
   width: 100%;
   margin-top: 3rem;
 
-  @include variables.sm {
-    flex-direction: column;
-  }
-
   @include variables.md {
     flex-direction: column;
   }
@@ -23,13 +19,6 @@
 
     transition: width 0.4s ease;
 
-    @include variables.sm {
-      width: 83vw;
-      height: 10vh;
-
-      transition: height 0.6s ease-in-out;
-    }
-
     @include variables.md {
       width: 83vw;
       height: 10vh;
@@ -38,12 +27,7 @@
     }
 
     &--active {
-      width: 38vw;
-
-      @include variables.sm {
-        width: 83vw;
-        height: 40vh;
-      }
+      width: 48vw;
 
       @include variables.md {
         width: 83vw;
@@ -67,11 +51,7 @@
 
       opacity: 0;
 
-      transition: opacity 0.3s ease;
-
-      @include variables.sm {
-        margin-bottom: 0.85em;
-      }
+      transition: opacity 0.2s ease 0.2s;
 
       @include variables.md {
         margin-bottom: 0.85em;
