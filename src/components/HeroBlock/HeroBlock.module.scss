@@ -6,14 +6,9 @@
   justify-content: space-between;
 
   height: 100vh;
-  padding: 0 2.5em;
 
   background-position: center;
   background-size: cover;
-
-  @include variables.md {
-    padding: 0 1.25em;
-  }
 
   &__content {
     display: flex;
@@ -22,6 +17,11 @@
 
     max-width: 80vw;
     margin-bottom: 10vh;
+    padding: 0 2.5em;
+
+    @include variables.md {
+      padding: 0 1.25em;
+    }
 
     &__title {
       font-size: 10.8rem;
